@@ -1,0 +1,32 @@
+name: Question
+description: Ask how to do something with a kit, or suggest something for a later version.
+labels: ["question"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        The READ ME script at the top of the kit folder covers install, settings and known limits. Issues are public: no place file, cookie, password, API key or personal information.
+  - type: dropdown
+    id: kit
+    attributes:
+      label: Kit name
+      options:
+        - Live Events Kit
+        - Weather System Kit
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Kit version
+      description: The line that starts with "Version" near the top of the kit's READ ME.
+      placeholder: Version 1.0.0, 2026-10-12
+    validations:
+      required: true
+  - type: textarea
+    id: question
+    attributes:
+      label: Your question
+      description: What you are trying to do, and what you have tried.
+    validations:
+      required: true
